@@ -10,8 +10,10 @@ public with sharing class QuickContactController {
     public static Contact saveContactWithAccount(Contact contact, Id accountId) {
         // Perform isAccessible() and isUpdateable() checks here
         contact.AccountId = accountId;
+        //teste
         upsert contact;
         return contact;
+
     }
 
     @AuraEnabled
